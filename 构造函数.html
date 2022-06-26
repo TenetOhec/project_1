@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //自定义构造函数
+        function Dog(name,sex,age){
+            this.n=name
+            this.s=sex
+            this.a=age
+           this.fake= function (){
+                console.log('汪汪队立大功')
+            }
+        }
+        //实例化对象
+
+        let d1=new Dog('旺财',12,'雄')
+        console.log(d1)
+        d1.fake()
+
+        let d2=new Dog
+        console.log(d2)
+        d2.fake();
+
+        //构造函数
+
+        let d3=new Object()
+        d3.name='章三' 
+        d3.xueli='本科'
+        d3.aihao=function(){
+            console.log('唱歌')
+        }
+        console.log(d3)
+        d3.aihao();
+
+        //
+        let d4 = new Object({name:'李四',xueli:'研究生',tc:function() {console.log('写字')
+            }})
+        console.log(d4)   
+        d4.tc(); 
+
+
+    </script>
+</body>
+</html>

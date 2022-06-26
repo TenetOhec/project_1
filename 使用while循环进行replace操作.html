@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var data = { name: 'zhuweimin', thing: 'kaoyan', times: 4 }
+        var str = '<div>{{name}}已经{{thing}}失败{{times}}次 了</div>'
+        var pattern = /{{\s*([a-zA-Z]+)\s*}}/
+        var resultStr = null
+        while (resultStr = pattern.exec(str)) {
+            console.log(resultStr)
+            str = str.replace(resultStr[0], data[resultStr[1]])
+        }
+        console.log(str)
+    </script>
+</body>
+
+</html>
